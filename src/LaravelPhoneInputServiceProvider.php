@@ -2,9 +2,9 @@
 
 namespace Soap\LaravelPhoneInput;
 
+use Soap\LaravelPhoneInput\Commands\LaravelPhoneInputCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Soap\LaravelPhoneInput\Commands\LaravelPhoneInputCommand;
 
 class LaravelPhoneInputServiceProvider extends PackageServiceProvider
 {
