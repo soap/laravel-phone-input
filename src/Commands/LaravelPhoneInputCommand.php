@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Soap\LaravelPhoneInput\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelPhoneInputCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-phone-input';
 
     public $description = 'My command';
 
