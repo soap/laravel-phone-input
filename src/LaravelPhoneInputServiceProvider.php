@@ -2,7 +2,12 @@
 
 namespace Soap\LaravelPhoneInput;
 
+<<<<<<< HEAD
 use Soap\LaravelPhoneInput\Commands\LaravelPhoneInputCommand;
+=======
+use Soap\LaravelPhoneInput\Commands\LaravelPhoneInputInstallCommand;
+use Soap\LaravelPhoneInput\View\Components\PhoneInput;
+>>>>>>> a068fe1 (feat: first commit)
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -19,7 +24,7 @@ class LaravelPhoneInputServiceProvider extends PackageServiceProvider
             ->name('laravel-phone-input')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel_phone_input_table')
-            ->hasCommand(LaravelPhoneInputCommand::class);
+            ->hasViewComponent('phone-input', PhoneInput::class)
+            ->hasCommand(LaravelPhoneInputInstallCommand::class);
     }
 }

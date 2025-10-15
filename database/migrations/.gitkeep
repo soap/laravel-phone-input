@@ -1,0 +1,4 @@
+# Database Migrations
+
+This directory is reserved for future database migrations if needed.
+Currently, the Laravel Phone Input package does not require any database tables.
