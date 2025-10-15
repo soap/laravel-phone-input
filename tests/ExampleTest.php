@@ -1,11 +1,10 @@
 <?php
 
 use Soap\LaravelPhoneInput\View\Components\PhoneInput;
-use Illuminate\View\ComponentAttributeBag;
 
 it('can instantiate phone input component', function () {
-    $component = new PhoneInput();
-    
+    $component = new PhoneInput;
+
     expect($component)->toBeInstanceOf(PhoneInput::class)
         ->and($component->name)->toBe('phone')
         ->and($component->mode)->toBe('field')
@@ -21,7 +20,7 @@ it('can set custom component properties', function () {
         required: true,
         mode: 'inline'
     );
-    
+
     expect($component->name)->toBe('mobile')
         ->and($component->label)->toBe('Mobile Number')
         ->and($component->value)->toBe('+66812345678')
@@ -35,7 +34,7 @@ it('can render field mode component', function () {
         label: 'Phone Number',
         placeholder: 'กรอกหมายเลขโทรศัพท์'
     );
-    
+
     // Test component properties
     expect($component->name)->toBe('phone')
         ->and($component->label)->toBe('Phone Number')
@@ -49,7 +48,7 @@ it('can render inline mode component', function () {
         value: '+66812345678',
         displayFormat: 'pretty'
     );
-    
+
     expect($component->mode)->toBe('inline')
         ->and($component->displayFormat)->toBe('pretty')
         ->and($component->inlineSaveOnBlur)->toBeTrue()

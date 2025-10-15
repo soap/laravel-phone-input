@@ -5,16 +5,16 @@ use Soap\LaravelPhoneInput\View\Components\PhoneInput;
 
 it('registers the service provider', function () {
     $provider = new LaravelPhoneInputServiceProvider($this->app);
-    
+
     expect($provider)->toBeInstanceOf(LaravelPhoneInputServiceProvider::class);
 });
 
 it('registers phone input blade component', function () {
     // Check if component class exists and can be instantiated
-    $component = new PhoneInput();
-    
+    $component = new PhoneInput;
+
     expect($component)->toBeInstanceOf(PhoneInput::class);
-    
+
     // Test component properties instead of view rendering
     expect($component->name)->toBe('phone')
         ->and($component->mode)->toBe('field')
@@ -29,6 +29,6 @@ it('has config file available', function () {
 
 it('has view files available', function () {
     // Test that component view exists in package resources
-    $viewPath = __DIR__ . '/../resources/views/components/phone-input.blade.php';
+    $viewPath = __DIR__.'/../resources/views/components/phone-input.blade.php';
     expect(file_exists($viewPath))->toBeTrue();
 });

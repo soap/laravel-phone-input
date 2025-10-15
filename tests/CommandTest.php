@@ -10,14 +10,14 @@ it('can run install command', function () {
 
 it('install command is registered', function () {
     // Test that command can be instantiated
-    $command = new LaravelPhoneInputInstallCommand();
-    
+    $command = new LaravelPhoneInputInstallCommand;
+
     expect($command)->toBeInstanceOf(LaravelPhoneInputInstallCommand::class);
 });
 
 it('install command has correct signature', function () {
-    $command = new LaravelPhoneInputInstallCommand();
-    
+    $command = new LaravelPhoneInputInstallCommand;
+
     expect($command->signature)->toBe('laravel-phone-input:install')
         ->and($command->description)->toBe('Install the Laravel Phone Input package');
 });
